@@ -1,0 +1,1088 @@
+\documentclass{beamer}
+\mode<presentation> {
+%\usetheme{Madrid}
+%\usetheme{default}
+\usepackage{color}
+\definecolor{bottomcolour}{rgb}{0.21,0.11,0.21}
+\definecolor{middlecolour}{rgb}{0.21,0.11,0.21}
+\setbeamercolor{structure}{fg=white}
+\setbeamertemplate{frametitle}[default]%[center]
+\setbeamercolor{normal text}{bg=black, fg=white}
+\setbeamertemplate{background canvas}[vertical shading]
+[bottom=bottomcolour, middle=middlecolour, top=black]
+\setbeamertemplate{items}[circle]
+
+\setbeamertemplate{navigation symbols}{} %no nav symbols
+\setbeamercolor{block title}{use=structure,fg=white,bg=structure.fg!50!red!50!blue!100!green}
+\setbeamercolor{block body}{parent=normal text,use=block title,bg=block title.bg!5!white!10!bg,fg=white}
+\setbeamertemplate{navigation symbols}{}
+\newcounter{moncompteur}
+}
+
+\usepackage{graphicx} 
+\usepackage{booktabs} 
+\usepackage[utf8]{inputenc}  
+\usepackage[T1]{fontenc}  
+\usepackage{geometry}     
+\usepackage[francais]{babel} 
+\usepackage{eurosym}
+\usepackage{verbatim}
+\usepackage{ragged2e}
+\justifying
+
+\input{cc_beamer}
+
+\title[Petit guide d'hygiène numérique]{
+Petit guide d'hygiène numérique
+} 
+\author{Genma}
+
+\begin{document}
+
+%% Titlepage
+\begin{frame}
+	\titlepage
+	\vfill
+	\begin{center}
+		\CcGroupByNcSa{0.83}{0.95ex}\\[2.5ex]
+		{\tiny\CcNote{\CcLongnameByNcSa}}
+		\vspace*{-2.5ex}
+	\end{center}
+\end{frame}
+
+
+%\begin{frame}
+%\frametitle{Plan} 
+%\tableofcontents
+%\end{frame}
+
+%----------------------------------------------------------------------------------------
+%	PRESENTATION SLIDES
+%----------------------------------------------------------------------------------------
+
+%------------------------------------------------
+
+\begin{frame}
+\frametitle{Remerciements à Root66}
+
+\justifying{
+Remerciements à Root66, association de promotion des logiciels libres
+et plus particulièrement à Jean-Christophe pour l'invitation à venir faire cette conférence.
+}
+\\
+\begin{center}
+\includegraphics[scale=0.5] {./images/motoroot.png} 
+\\
+\url{http://www.root66.net}
+\end{center}
+\end{frame}
+
+
+\begin{frame}
+\frametitle{\includegraphics[scale=0.4]{./images/Genma.jpg} \ \ \  A propos de moi  }
+\begin{columns}[c] 
+
+\column{.55\textwidth} 
+\textbf{Où me trouver sur Internet?}
+\begin{itemize}
+\item Le Blog de Genma : \url{http://genma.free.fr}
+\item Twitter : \url{http://twitter.com/genma}
+\end{itemize}
+
+\textbf{Mes centres d'intérêts?}
+\\ Plein de choses dont:
+\begin{itemize}
+\item La veille technologique
+\item Le chiffrement (cryptopartie)
+\end{itemize}
+
+\column{.5\textwidth} 
+\includegraphics[width=5cm,height=5cm]{./images/blog.png} 
+\end{columns}
+\end{frame}
+
+
+%----------------------------------------------------------------------------------------
+\begin{frame}
+\begin{center}
+\Huge{De quoi allons nous parler?}
+\end{center}
+\end{frame}
+
+%------------------------------------------------
+
+\begin{frame}
+\frametitle{But de cette présentation}
+
+\begin{block}{Ce que cette présentation est}
+\begin{itemize}
+\justifying{
+\item Une introduction à quelques règles et astuces pour mieux utiliser son ordinateur
+ \item avec quelques règles de sécurité...
+}
+\end{itemize}
+ \textbf{Cette présentation est grand publique}.
+\end{block}
+\end{frame}
+
+%----------------------------------------------------------------------------------------
+\begin{frame}
+\begin{center}
+\Huge{Vous serez libre de poser des questions, de demander à approfondir certains sujets en fin de présentation.}
+\end{center}
+\end{frame}
+
+
+%----------------------------------------------------------------------------------------
+\begin{frame}
+\frametitle{Comprendre l'informatique}
+\begin{block}{Apprendre les bases}
+\begin{itemize}
+\item Le but n'est pas d'être un informaticien.
+\item Le but est de démystifier l'ordinateur, ce n'est pas magique.
+\item Oui, c'est compliqué, mais ça s'apprend.
+\item Un ordinateur est stupide. Il ne fait que ce qu'on lui a demandé.
+\end{itemize}
+% Il faut apprendre les bases (passer le permis). Ensuite, on peut toujours aller plus loin, si on le souhaite.
+\end{block}
+\end{frame}
+
+
+%----------------------------------------------------------------------------------------
+\begin{frame}
+\frametitle{Et l'hygiène numérique?}
+\begin{block}{}
+\justifying{
+L'hygiène est un ensemble de mesures destinées à prévenir les infections et l'apparition de maladies infectieuses.
+\\
+Ce guide d''hygiène numérique, ce sont des règles destinées à mieux utiliser son ordinateur, en sécurité, de façon simple.
+}
+\end{block}
+\end{frame}
+
+
+
+%----------------------------------------------------------------------------------------
+\begin{frame}
+\begin{center}
+\Huge{Quelques règles}
+\end{center}
+\end{frame}
+
+%----------------------------------------------------------------------------------------
+
+\begin{frame}
+\frametitle{Les règles de sécurité}
+\begin{center}
+\includegraphics[scale=0.3] {./images/sadgizmo_large.jpeg}
+\end{center}
+
+\justifying{
+\begin{block}{}
+\begin{itemize}
+\item Ne pas exposer l'animal à la lumière — et plus spécialement à celle du soleil qui le tuerait, 
+\item Ne pas le mouiller, 
+\item Et surtout, quoi qu'il arrive, ne jamais lui donner à manger après minuit.
+\end{itemize}
+\end{block}
+}
+\end{frame}
+
+%----------------------------------------------------------------------------------------
+\begin{frame}
+\begin{center}
+\Huge{Plus sérieusement}
+\end{center}
+\end{frame}
+
+%----------------------------------------------------------------------------------------
+\begin{frame}
+
+\frametitle{Règle n\degre \themoncompteur \  - Mises à jour de sécurité}
+\justifying{
+\begin{block}{FAIRE LES MISES A JOUR}
+\begin{itemize}
+\item Avoir un système à jour.
+\item Avoir des logiciels à jour.
+\item Avoir un antivirus à jour.
+\end{itemize}
+\end{block}
+}
+\justifying{
+\begin{block}{Les logiciels ont des bugs}
+\begin{itemize}
+\item Un bug peut-être utilisé par un virus...
+ \item Mettre à jour, c'est corriger les bugs, donc se protéger.
+\end{itemize}
+\end{block}
+}
+\end{frame}
+
+\begin{frame}
+\frametitle{Règle n\degre \themoncompteur \  - Mises à jour de sécurité}
+\begin{center}
+\includegraphics[scale=0.3] {./images/Maj02.png}
+\end{center}
+\end{frame}
+
+\begin{frame}
+\frametitle{Règle n\degre \themoncompteur \  - Mises à jour de sécurité}
+\begin{center}
+\includegraphics[scale=0.4] {./images/Maj01.png}
+\end{center}
+\end{frame}
+\addtocounter{moncompteur}{1}
+
+
+%----------------------------------------------------------------------------------------
+\begin{frame}
+
+\frametitle{Règle n\degre \themoncompteur \  - Gestion des comptes}
+\begin{block}{Des comptes pour des usages différents}
+\begin{itemize}
+\justifying{
+\item Créer un compte utilisateur et un compte administrateur.
+\item Au quotidien, utiliser le compte utilisateur.
+\item Le compte administrateur porte bien son nom, il ne doit servir qu'aux tâches d'administration (installation des logiciels...)
+}
+\end{itemize}
+\justifying{
+Quand l'ordinateur pose une question "Je dois lancer ce programme", réfléchir. Ne pas dire oui tout de suite.
+}
+\end{block}
+\end{frame}
+\addtocounter{moncompteur}{1}
+
+%----------------------------------------------------------------------------------------
+\begin{frame}
+
+\frametitle{Règle n\degre \themoncompteur \  - Mots de passe}
+\begin{block}{Règles}
+\begin{itemize}
+\justifying{
+\item Plus c'est long, plus c'est bon
+\item Ne pas avoir le même mot de passe pour deux comptes en lignes.
+}
+\end{itemize}
+\end{block}
+
+\begin{block}{Mot de passe oublié?}
+\justifying{
+Pour tester la sécurité d'un site web, on clique sur le lien "mot de passe oublié".
+\begin{itemize}
+\item Si le mot de passe est renvoyé dans le mail, ce n'est pas bon. Le mot de passe est stocké "clair".
+\end{itemize}
+}
+\end{block}
+
+\begin{block}{Trop de mot de passe à retenir?}
+Il y a le logiciel Keepass. \url{http://www.keepass.info}
+\end{block}
+
+\end{frame}
+
+%----------------------------------------------------------------------------------------
+\begin{frame}
+
+\frametitle{Règle n\degre \themoncompteur \  - Mots de passe}
+\begin{block}{Les sites permettant de tester ses mots de passes?}
+\begin{itemize}
+\justifying{
+\item Ils sont la meilleure façon de constituer une base de données de mots de passe.
+\item Ne pas tester son vrai mot de passe mais un mot de passe du même type/de la même forme.
+\item Les mots de passe sont personnels 
+}
+\end{itemize}
+\end{block}
+
+\begin{block}{Parents - enfants}
+Tant qu’on est mineur on doit les donner à ses parents. Les parents qui sont des gens bien et responsables, ne sont pas là pour les utiliser pour espionner leurs enfants mais seulement au cas où.
+\end{block}
+
+\end{frame}
+\addtocounter{moncompteur}{1}
+
+%----------------------------------------------------------------------------------------
+\begin{frame}
+
+\frametitle{Règle n\degre \themoncompteur \  -  Les mails}
+
+\begin{block}{Phishing - Hameçonnage}
+\begin{itemize}
+\justifying{
+\item Ne JAMAIS envoyer d'argent. Même à un ami.
+\item Etes vous sûr que c'est bien votre banque?
+}
+\end{itemize}
+\end{block}
+
+\begin{center}
+\textbf{Toujours lire et réfléchir avant de cliquer.}
+\end{center}
+\end{frame}
+\addtocounter{moncompteur}{1}
+
+%----------------------------------------------------------------------------------------
+\begin{frame}
+\frametitle{Règle n\degre \themoncompteur \  - Le navigateur}
+\justifying{
+\begin{block}{Utiliser Firefox}
+\begin{itemize}
+\item Firefox doît être à jour.
+\item Les plugins (Flash, Java) doivent être à jour.
+\item Les extensions doivent être à jour.
+\item Supprimer les plugins inutiles.
+\end{itemize}
+\end{block}
+}
+\begin{center}
+\includegraphics[scale=0.2] {./images/Firefox.jpg}
+\end{center}
+\end{frame}
+\addtocounter{moncompteur}{1}
+
+\begin{frame}
+\frametitle{Règle n\degre \themoncompteur \  - Les plugins}
+\begin{center}
+\includegraphics[scale=0.5] {./images/PluginPasAjour.jpg}
+\end{center}
+\end{frame}
+
+\addtocounter{moncompteur}{1}
+
+%----------------------------------------------------------------------------------------
+\begin{frame}
+
+\frametitle{Règle n\degre \themoncompteur \  -  Installation de logiciels}
+\justifying{
+\begin{block}{Logiciels payants - propriétaires}
+\begin{itemize}
+\item Pas de logiciels crackés
+\item Pas de téléchargement de logiciels depuis un autre site que le site officiel.
+On oublie les sites 01Net, Télécharger.com
+\item Que les logiciels dont on a besoin (pas de démos, de logiciels marrants...)
+\end{itemize}
+\end{block}
+
+\begin{block}{Logiciels libres}
+\begin{itemize}
+\item Préférer le logiciel libre - open-source.
+\item Passer par l'annuaire de Framasoft.
+\end{itemize}
+\end{block}
+}
+\end{frame}
+\addtocounter{moncompteur}{1}
+
+%----------------------------------------------------------------------------------------
+\begin{frame}
+\frametitle{Règle n\degre \themoncompteur \  - Le copain qui s'y connait}
+
+\begin{block}{Attention}
+\begin{itemize}
+\justifying{
+\item Ne pas le laisser installer les logiciels crackés.
+\item Chercher à comprendre ce qu'il fait, lui demander. 
+\item S'il n'est pas capable d'expliquer, se méfier. Voir refuser.
+}
+\end{itemize}
+\end{block}
+
+\begin{block}{PC = Personnal Computer}
+\begin{itemize}
+\justifying{
+\item Ne pas faire confiance. Il ne faut prêter sa machine sans voir ce que fait l’individu à qui vous l’avez confié.
+\item Il faut prévoir  une session invitée. 
+\item Il est si facile d’installer un virus sur un PC que c’est un risque trop important à courir.
+}
+\end{itemize}
+\end{block}
+\end{frame}
+\addtocounter{moncompteur}{1}
+
+%----------------------------------------------------------------------------------------
+\begin{frame}
+\frametitle{Règle n\degre \themoncompteur \  - Résumé}
+
+\begin{block}{Bilan}
+\begin{itemize}
+\justifying{
+\item Vous voulez éviter le gros de la contamination virale : Linux. 
+\item Evitez les sites de Warez, de porno, les installations de logiciels piochés à gauche et à droite sur la toile, les clés USB.
+\item De façon générale, lisez, apprenez, documentez vous, ayez une utilisation rationnelle de votre ordinateur. 
+\item Enfin le cas échéant, quelques outils comme Malwarebytes antimalware ou Adwcleaner sont efficaces pour vérifier si la machine est saine.
+ }
+\end{itemize}
+\end{block}
+\end{frame}
+\addtocounter{moncompteur}{1}
+
+
+%----------------------------------------------------------------------------------------
+\begin{frame}
+\begin{center}
+\Huge{En applicant, ces règles, on a tout de suite beaucoup moins de soucis avec son PC.}
+\end{center}
+\end{frame}
+
+
+%----------------------------------------------------------------------------------------
+\begin{frame}
+\begin{center}
+\Huge{Les sauvegardes}
+
+\includegraphics[scale=0.5] {./images/backup.jpg}
+\end{center}
+\end{frame}
+
+%----------------------------------------------------------------------------------------
+\begin{frame}
+\begin{center}
+\Huge{Mon PC ne marche plus, on me le vole...
+Quelles sont les données que je perds?
+Quelle importance ont ces données pour moi?
+}
+
+\includegraphics[scale=0.5] {./images/laptopthief.jpg}
+\end{center}
+
+\end{frame}
+
+%----------------------------------------------------------------------------------------
+\begin{frame}
+\frametitle{Notre vie numérique}
+
+\begin{block}{De plus en plus de données sont sur nos ordinateurs}
+\begin{itemize}
+\justifying{
+\item Les photos de vacances,
+\item Les factures...
+}
+\end{itemize}
+Comment les préserver?
+\end{block}
+\end{frame}
+
+
+%----------------------------------------------------------------------------------------
+\begin{frame}
+\frametitle{Sauvegarde simple et efficace}
+
+\begin{block}{Le disque dur externe}
+\begin{itemize}
+\justifying{
+\item Méthode simple : copier-coller.
+\item Méthode plus avancé : on "synchronise".
+\item On le dépose chez un ami, un voisin, un parent (pour éviter le vol, l'incendie...)
+}
+\end{itemize}
+Petit plus : chiffrer le disque pour plus de confidentialité.
+\end{block}
+\begin{center}
+\includegraphics[scale=0.5] {./images/backup.jpg}
+\end{center}
+
+\end{frame}
+
+%----------------------------------------------------------------------------------------
+\begin{frame}
+\frametitle{Sauvegarder dans le cloud?}
+
+\begin{block}{Pratique mais...}
+\begin{itemize}
+\justifying{
+\item Quid de la pérénité des données?
+\item De la confidentialité des données?
+}
+\end{itemize}
+\end{block}
+
+\begin{center}
+\includegraphics[scale=0.4] {./images/cloud_data_center.jpg}
+\end{center}
+
+\end{frame}
+
+%----------------------------------------------------------------------------------------
+\begin{frame}
+\begin{center}
+\Huge{Quand je vais sur sur Internet...}
+\end{center}
+\end{frame}
+
+%----------------------------------------------------------------------------------------
+\begin{frame}
+\begin{center}
+\Huge{L'identité numérique}
+\end{center}
+\end{frame}
+
+
+%----------------------------------------------------------------------------------------
+\begin{frame}
+\frametitle{L'identité numérique c'est quoi?}
+
+
+\begin{block}{Définition}
+\begin{itemize}
+\justifying{
+\item L'identité numérique, c'est l'ensemble des données publiques que l'on peut trouver sur Internet et rattacher à une personne, en l'occurence moi.
+\item C'est la fameuse e-reputation.
+}
+\end{itemize}
+\end{block}
+
+\end{frame}
+
+%----------------------------------------------------------------------------------------
+\begin{frame}
+\frametitle{L'image que je donne de moi}
+
+\justifying{
+\begin{block}{Googler "son nom".}
+\begin{itemize}
+\item Les résultats apparaissant sont-ils bien ce que l'on souhaite?
+\end{itemize}
+\end{block}
+}
+\begin{center}
+\includegraphics[scale=0.3] {./images/Google01.png}
+\\
+\includegraphics[scale=0.3] {./images/Google02.png}
+\end{center}
+
+\end{frame}
+
+%----------------------------------------------------------------------------------------
+\begin{frame}
+\frametitle{Adage}
+
+
+\begin{block}{Les paroles s'envolent, les écrits restent}
+\begin{itemize}
+\justifying{
+\item Cet adage est encore plus vrai avec Internet.
+\item  Il faut partir du principe que ce que l'on dit sera toujours accessible, même des années après.
+\item Tout ce qui est sur Internet est public ou le sera (même si c'est "privé". Les conditions d'utilisation évoulent. Cf.Facebook).
+\item Il ne faut donc pas abuser de la liberté d'expression et rester respectueux des lois en vigueurs.
+}
+\end{itemize}
+\end{block}
+
+
+\end{frame}
+
+%----------------------------------------------------------------------------------------
+\begin{frame}
+\frametitle{Le pseudonymat}
+
+
+\begin{block}{Défintions}
+\begin{itemize}
+\justifying{
+\item Contraction des termes pseudonyme et anonymat, le terme de pseudonymat reflète assez bien la volonté contradictoire d’être un personnage publique et de rester anonyme...
+\item Avoir un pseudonyme ne veut pas dire faire et dire n'importe quoi.
+\item Il en va de l'image que je renvoie, que je donne de moi et de ma crédibilité présente et à venir.
+\item Un pseudonyme, c'est aussi une identité publique, qui est associée à un ensemble cohérent de compte qui forme un tout : mon blog, mon Twitter, mon compte Facebook.
+\item L'identité numérique est l'ensemble des données publiques associées à cette identité. 
+}
+\end{itemize}
+\end{block}
+
+\end{frame}
+
+
+%----------------------------------------------------------------------------------------
+\begin{frame}
+\frametitle{Exemples}
+
+\begin{block}{Twitter}
+\begin{center}
+\includegraphics[scale=0.3] {./images/Twitter.png}
+\end{center}
+\end{block}
+
+\begin{block}{Linkedin}
+\begin{center}
+\includegraphics[scale=0.3] {./images/Linkedin.png}
+\end{center}
+\end{block}
+
+\end{frame}
+
+
+%----------------------------------------------------------------------------------------
+\begin{frame}
+\begin{center}
+\Huge{Utilisation d'Internet \\depuis un lieu public}
+\end{center}
+\end{frame}
+
+
+ %----------------------------------------------------------------------------------------
+\begin{frame}
+\frametitle{Utilisation d'un PC d'un Cybercafé?}
+
+\begin{block}{Pour le surf Internet}
+\begin{itemize}
+\justifying{
+\item Eviter les sites sur lesquels on sait des données personnelles : webmail, réseaux sociaux
+\item Vérifier la version du navigateur
+\item  Ne pas mémoriser vos informations confidentielles
+\item  Penser à fermer votre session
+\item  Effacer vos traces de navigation
+}
+\end{itemize}
+\end{block}
+\justifying{
+Ne pas brancher de clef USB (virus), ne pas récupérer de documents.
+\\
+Idéalement? Un navigateur en mode portable, depuis une clef USB
+\\
+Encore mieux : rebooter sur un live-usb/cd
+}
+\end{frame}
+%----------------------------------------------------------------------------------------
+\begin{frame}
+\frametitle{Wi-Fi public?}
+Ne pas avoir confiance. Utiliser sa propre machine.
+\begin{block}{Attention à la sécurisation}
+\begin{itemize}
+\justifying{
+\item Au minimum : connexion HTTPS
+\item Mieux, passer par un VPN
+}
+\end{itemize}
+\end{block}
+\end{frame}
+
+%----------------------------------------------------------------------------------------
+\begin{frame}
+\frametitle{La Navigation privée}
+
+\justifying{Naviguer sur Internet sans conserver d'informations sur les sites que vous visitez. Avertissement :
+ La navigation privée n'a pas pour effet de vous rendre anonyme sur Internet. Votre fournisseur d'accès Internet, votre employeur ou les sites eux-mêmes peuvent toujours pister les pages que vous visitez.}
+
+\begin{block}{Quelles données ne sont pas enregistrées durant la navigation privée ?}
+\begin{itemize}
+\justifying{
+\item Pages visitées 
+\item Saisies dans les formulaires et la barre de recherche
+\item Mots de passe
+\item Liste des téléchargements 
+\item Cookies
+\item Fichiers temporaires ou tampons 
+}
+\end{itemize}
+\end{block}
+\end{frame}
+
+
+%----------------------------------------------------------------------------------------
+\begin{frame}
+\begin{center}
+\Huge{Sur Internet, si c'est gratuit, c'est vous le produit }
+\end{center}
+\end{frame}
+
+
+%----------------------------------------------------------------------------------------
+\begin{frame}
+\frametitle{Qu'est-ce que le pistage ?}
+
+
+\begin{block}{Le pistage sur Internet}
+\begin{itemize}
+\justifying{
+\item Le pistage est un terme qui comprend des méthodes aussi nombreuses et variées que les sites web, les annonceurs et d'autres utilisent pour connaître vos habitudes de navigation sur le Web. 
+\item  Cela comprend des informations sur les sites que vous visitez, les choses que vous aimez, n'aimez pas et achetez. 
+\item Ils utilisent souvent ces données pour afficher des pubs, des produits ou services spécialement ciblés pour vous. 
+}
+\end{itemize}
+\end{block}
+\end{frame}
+
+
+%----------------------------------------------------------------------------------------
+\begin{frame}
+\frametitle{Comment est-on tracké?}
+
+\justifying{
+\begin{block}{Toutes les publicités nous espionnent}
+\begin{itemize}
+\item Le bouton Like de Facebook : il permet à FaceBook de savoir que vous avez visité ce site, même si vous n'avez pas cliqué sur ce bouton.
+\item Même si vous vous êtes correctement déconnecté de Facebook.
+\item De même pour le bouton le +1 de Google, les scripts de Google Analytics, 
+\item Tous les publicité, Amazon...
+\end{itemize}
+\end{block}
+}
+\begin{center}
+\includegraphics[scale=0.3] {./images/Facebook_like.png}
+\end{center}
+\end{frame}
+
+
+%----------------------------------------------------------------------------------------
+\begin{frame}
+\frametitle{L'extension Firefox LightBeam (ex Collusion)}
+Cette extension permet de voir en temps réel qui nous traque et les interconnexions qu'a le site actuellement visité avec d'autres sites.
+\begin{center}
+\includegraphics[scale=0.3] {./images/Collusion.png}
+\end{center}
+\end{frame}
+
+
+%----------------------------------------------------------------------------------------
+\begin{frame}
+\begin{center}
+\Huge{Alors quoi faire? }
+\end{center}
+\end{frame}
+
+%----------------------------------------------------------------------------------------
+\begin{frame}
+\frametitle{La navigation en mode privée}
+
+\justifying{
+\begin{block}{Quelles données ne sont pas enregistrées durant la navigation privée ?}
+\begin{itemize}
+\item pages visitées ;
+\item saisies dans les formulaires et la barre de recherche ;
+\item mots de passe ; 
+\item liste des téléchargements ; 
+\item cookies ;
+\item fichiers temporaires ou tampons.
+\end{itemize}
+\end{block}
+}
+\end{frame}
+
+
+%----------------------------------------------------------------------------------------
+\begin{frame}
+\begin{center}
+\Huge{Installer des extensions\\ pour Firefox }
+\end{center}
+\end{frame}
+
+%----------------------------------------------------------------------------------------
+\begin{frame}
+\frametitle{AdBlock Edge 1/2}
+Page avec publicité :
+\begin{center}
+\includegraphics[scale=0.4] {./images/Adblock01.png}
+\end{center}
+
+\end{frame}
+
+%----------------------------------------------------------------------------------------
+\begin{frame}
+\frametitle{AdBlock Edge 2/2}
+Bloque les publicités. Allège les pages.
+
+\begin{center}
+\includegraphics[scale=0.4] {./images/Adblock02.png}
+\end{center}
+\end{frame}
+
+
+%----------------------------------------------------------------------------------------
+\begin{frame}
+\frametitle{Request Policy}
+
+Bloque tous les trackers associés au site.
+
+\begin{center}
+\includegraphics[scale=0.4] {./images/RequestPolicy.png}
+\end{center}
+\end{frame}
+
+
+%----------------------------------------------------------------------------------------
+\begin{frame}
+\frametitle{Self destructing cookie}
+
+Suppression automatisée des cookies
+
+\begin{center}
+\includegraphics[scale=0.4] {./images/selfdestructingcookie.png}
+\end{center}
+\end{frame}
+
+%----------------------------------------------------------------------------------------
+\begin{frame}
+\begin{center}
+\Huge{Changer de moteur de recherche}
+\end{center}
+\end{frame}
+
+%----------------------------------------------------------------------------------------
+\begin{frame}
+\begin{center}
+\frametitle{Duckduckgo - Google tracks you. We don't.}
+
+\url{https://duckduckgo.com/}
+\\
+\includegraphics[scale=0.6] {./images/DuckDuckGo.jpg}
+\end{center}
+\end{frame}
+
+%----------------------------------------------------------------------------------------
+\begin{frame}
+\begin{center}
+\Huge{Et pour plus de sécurité?}
+\end{center}
+\end{frame}
+
+%----------------------------------------------------------------------------------------
+\begin{frame}
+\frametitle{HTTPSEverywhere}
+
+Force le passage en https quand celui-ci est proposé par le site.
+
+\begin{center}
+\includegraphics[scale=0.4] {./images/https-everywhere.jpg}
+\end{center}
+
+\end{frame}
+
+%----------------------------------------------------------------------------------------
+\begin{frame}
+\frametitle{HTTPSEverywhere}
+
+\begin{center}
+\includegraphics[scale=0.4] {./images/Https_SSL_Observatory.jpg}
+\end{center}
+
+\end{frame}
+
+%----------------------------------------------------------------------------------------
+\begin{frame}
+\frametitle{Certificate Patrol}
+Permet de valider les certificats d'un site (lié à https).
+\begin{center}
+\includegraphics[scale=0.5] {./images/CertificatePatrol.png}
+\end{center}
+\end{frame}
+
+%----------------------------------------------------------------------------------------
+\begin{frame}
+\frametitle{Certificate Patrol}
+\begin{center}
+\includegraphics[scale=0.5] {./images/Certificate_Patrol_certifcat_a_change.jpg}
+\end{center}
+\end{frame}
+
+
+%----------------------------------------------------------------------------------------
+\begin{frame}
+\begin{center}
+\Huge{Et pour encore plus de sécurité?}
+\end{center}
+\end{frame}
+
+%------------------------------------------------
+\begin{frame}
+\frametitle{Le chiffrement}
+\justifying{
+\begin{block}{En local - ses données}
+\begin{itemize}
+\item Son disque dur
+\item Sa clef USB
+\item Son smartphone
+\end{itemize}
+\end{block}
+
+\begin{block}{En réseau - ses communications}
+\begin{itemize}
+\item Https : utilisation de l'extension HTTPSEveryWhere pour Firefox  
+\item Ses e-mails : utilisation de GPG via Enigmail pour Thunderbird
+\item Sa connexion : utiliser un VPN, SSH, la clef "WIFI".
+\end{itemize}
+\end{block}
+
+\begin{block}{}
+$\Rightarrow$ \`A chaque "usage", il y a une solution de chiffrement possible.
+\end{block}
+}
+\end{frame}
+%----------------------------------------------------------------------------------------
+\begin{frame}
+\begin{center}
+\Huge{Le chiffrement peut être le sujet d'une présentation dédiée...}
+\end{center}
+\end{frame}
+
+
+
+%----------------------------------------------------------------------------------------
+\begin{frame}
+\begin{center}
+\Huge{Attention aux métadonnées}
+\end{center}
+\end{frame}
+%----------------------------------------------------------------------------------------
+\begin{frame}
+\Huge{\centerline{Les métadonnées}}
+\end{frame}
+
+\begin{frame}
+\frametitle{Les métadonnées}
+\begin{block}{Qu'est-ce qu'une metadonnée ?}
+\justifying{
+Une métadonnée est une information qui caractérise une donnée. 
+\\~\\
+Prenons un exemple : lorsque vous créez un PDF, en général, des données additionnelles sont ajoutées à votre fichier : le nom du logiciel producteur, votre nom, la date de production, la description de votre document, le titre de votre document, la dernière date de modification, … ce sont des métadonnées. 
+\\~\\
+Vous n'avez peut-être pas envie de partager ces informations lorsque vous partagez votre fichier.}
+\end{block}
+\end{frame}
+
+
+%------------------------------------------------
+
+\begin{frame}
+\frametitle{Metadata Photo}
+\begin{center}
+\includegraphics[scale=0.5] {./images/Metadata.png} 
+\end{center}
+\end{frame}
+
+\begin{frame}
+\frametitle{Metadata Photo}
+\begin{center}
+\includegraphics[scale=0.5] {./images/exif-metadata.jpg} 
+\end{center}
+\end{frame}
+
+
+\begin{frame}
+\frametitle{Metadata Word 1/2}
+\begin{center}
+\includegraphics[scale=0.5] {./images/Word01.jpg} 
+\end{center}
+\end{frame}
+
+\begin{frame}
+\frametitle{Metadata Word 2/2}
+\begin{center}
+\includegraphics[scale=0.5] {./images/Word02.jpg}
+\end{center}
+\end{frame}
+
+
+%------------------------------------------------
+
+\begin{frame}
+\frametitle{Les métadonnées}
+\begin{block}{Pourquoi les métadonnées sont elles un risque pour notre vie privée?}
+\justifying{
+Les métadonnées dans un fichier peuvent en dire beaucoup sur vous. Les appareils photos enregistrent des données sur le moment où une photo a été prise et quel appareil photo a été utilisé. 
+\\~\\
+Les documents bureautiques ajoutent automatiquement l'auteur et diverses informations sur la société aux documents et feuilles de calcul. 
+\\~\\
+Peut-être que vous ne voulez pas divulguer ces informations sur le web?
+}
+\end{block}
+\end{frame}
+
+%------------------------------------------------
+
+\begin{frame}
+\frametitle{Le logiciel MAT}
+\begin{block}{Le logiciel MAT}
+\justifying{
+MAT est une boîte à outil composé d'une interface graphique, d'une version en ligne de commande et d'une bibliothèque.
+\\~\\
+MAT crée automatiquement une copie des documents originaux dans une version nettoyée (laissant intact les originaux). 
+\\~\\
+MAT est fournit par défaut dans le live-cd Tails. 
+}
+\end{block}
+\end{frame}
+
+%------------------------------------------------
+
+\begin{frame}
+\frametitle{Le logiciel MAT}
+\begin{center}
+\includegraphics[scale=0.3] {./images/Mat.png} 
+\end{center}
+\end{frame}
+
+
+%------------------------------------------------
+\begin{frame}
+\frametitle{MAT}
+
+\begin{block}{Les formats actuellement supportés}
+Actuellement, MAT supporte pleinement les formats suivants :
+\begin{itemize}
+\item Portable Network Graphics (.png)
+\item JPEG (.jpg, .jpeg, …)
+\item Open Documents (.odt, .odx, .ods, …)
+\item Office OpenXml (.docx, .pptx, .xlsx, …)
+\item Portable Document Fileformat (.pdf)
+\item Tape ARchives (.tar, .tar.bz2, …)
+\item MPEG AUdio (.mp3, .mp2, .mp1, …)
+\item Ogg Vorbis (.ogg, …)
+\item Free Lossless Audio Codec (.flac)
+\item Torrent (.torrent)
+\end{itemize}
+\end{block}
+\end{frame}
+
+
+%----------------------------------------------------------------------------------------
+\begin{frame}
+\Huge{\centerline{Attention au suivi des modifications}}
+\end{frame}
+
+
+%------------------------------------------------
+
+\begin{frame}
+\frametitle{Le suivi des modifications}
+\begin{center}
+\includegraphics[scale=0.6] {./images/SuiviModif01.jpg} 
+\end{center}
+\end{frame}
+
+
+\begin{frame}
+\frametitle{Le suivi des modifications}
+\begin{center}
+\includegraphics[scale=0.6] {./images/SuiviModif02.jpg} 
+\end{center}
+\end{frame}
+
+
+%----------------------------------------------------------------------------------------
+\begin{frame}
+\Huge{\centerline{Merci de votre attention.}}
+\Huge{\centerline{Place aux questions...}}
+\end{frame}
+
+%----------------------------------------------------------------------------------------
+\begin{frame}
+\begin{center}
+\Huge{Annexes}
+\end{center}
+\end{frame}
+
+\begin{frame}
+\begin{center}
+\includegraphics[scale=0.5] {./images/Annexe01.jpg} 
+\end{center}
+\end{frame}
+
+\begin{frame}
+\begin{center}
+\includegraphics[scale=0.5] {./images/Annexe02.jpg} 
+\end{center}
+\end{frame}
+
+
+
+\end{document}
